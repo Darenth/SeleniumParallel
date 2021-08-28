@@ -1,1 +1,0 @@
-{"uuid":"cb5e42d3-a749-4d39-8725-0a3f7eacec80","name":"TestNG Group Test","children":["0e8f9094-97c4-4660-b57f-2c632ff35747"],"befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1630140648762,"stop":1630140649419}],"links":[],"start":1630140644201,"stop":1630140649420}
