@@ -13,7 +13,15 @@ public class HomePage {
         clickLink("JavaScript Alerts");
         return new AlertsPage(driver);
     }
+    public  HoversPage clickHovers(){
+        clickLink("Hovers");
+        return new HoversPage(driver);
+    }
 
+    public HorizontalSliderPage clickHorizontalSlider(){
+        clickLink("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
 
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();

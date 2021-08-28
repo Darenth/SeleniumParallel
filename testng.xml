@@ -5,6 +5,8 @@
         <classes>
             <class name="AlertTests"/>
             <class name="FileUploadtests"/>
+            <class name="HorizontalSliderPageTests"/>
+            <class name="HoverTests"/>
         </classes>
     </test>
 </suite>

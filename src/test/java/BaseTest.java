@@ -31,7 +31,6 @@ public class BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void goHome() {
-        System.out.println(driver == null);
         if (driver == null) {
             driver = getChromeDriver();
         }
