@@ -3,10 +3,10 @@
 <suite name="TestNG Group Test" parallel="classes" thread-count="4" >
     <test name="Testsuite 1">
         <classes>
-            <class name="AlertTests"/>
-            <class name="FileUploadtests"/>
-            <class name="HorizontalSliderPageTests"/>
-            <class name="HoverTests"/>
+            <class name="alerts.AlertTests"/>
+            <class name="alerts.FileUploadtests"/>
+            <class name="horizontalslider.HorizontalSliderPageTests"/>
+            <class name="hover.HoverTests"/>
         </classes>
     </test>
 </suite>

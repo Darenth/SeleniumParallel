@@ -1,3 +1,5 @@
+package base;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -6,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import pages.HomePage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,7 +17,7 @@ public class BaseTest {
 
     WebDriver driver;
     WebDriverWait wait;
-    HomePage homePage;
+    protected HomePage homePage;
 
 
     @BeforeClass(alwaysRun = true)

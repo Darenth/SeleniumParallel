@@ -1,12 +1,14 @@
+package alerts;
 
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+import retry.Retry;
 
 public class AlertTests extends BaseTest {
 
 
-    @Test (groups = {"Alerts","regressionTests"})
+    @Test (groups = {"Alerts","regressionTests"}, retryAnalyzer = Retry.class)
     public void testAcceptAlert() {
         var alertsPage = homePage.clickJavaScriptAlerts();
         alertsPage.triggerAlert();

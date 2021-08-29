@@ -1,4 +1,6 @@
+package horizontalslider;
 
+import base.BaseTest;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
