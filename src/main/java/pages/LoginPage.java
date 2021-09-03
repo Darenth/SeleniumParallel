@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -13,7 +14,7 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
-
+    @Step("Set username: {0}, for method {method} ")
     public void setUsername(String username){
         driver.findElement(usernameField).sendKeys(username);
     }

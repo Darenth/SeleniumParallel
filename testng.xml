@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestNG Group Test" parallel="classes" thread-count="4" >
+<suite name="TestNG Group Test" parallel="classes" thread-count="2" >
     <test name="Testsuite 1">
+        <!--        from cmd for generate report-->
+        <!--    mvn clean test site io.qameta.allure:allure-maven:report-->
         <classes>
-            <class name="alerts.AlertTests"/>
+<!--            <class name="login.LoginTest"/>-->
             <class name="alerts.FileUploadtests"/>
-            <class name="horizontalslider.HorizontalSliderPageTests"/>
-            <class name="hover.HoverTests"/>
+<!--            <class name="horizontalslider.HorizontalSliderPageTests"/>-->
+<!--            <class name="hover.HoverTests"/>-->
         </classes>
     </test>
 </suite>
