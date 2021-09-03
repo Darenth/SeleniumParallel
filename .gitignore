@@ -1,4 +1,6 @@
 /target/**
 /target/
 ./.allure/**
+/.allure/
 .idea
+.idea/*

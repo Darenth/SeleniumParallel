@@ -13,7 +13,7 @@ public class LoginTest extends BaseTest {
     @Test(groups = {"LoginTest","regressionTests"})
     public void testSucessfulLogin() {
         LoginPage loginPage = homePage.clickFormAuthentication();
-        loginPage.setUsername("tomsmith");
+        loginPage.setUsername("tomsmaith");
         loginPage.setPassword("SuperSecretPassword!");
         SecurePage securePage = loginPage.clickLoginButton();
         System.out.println(securePage.getAlertStatus());
