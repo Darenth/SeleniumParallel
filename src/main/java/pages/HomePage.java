@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage {
 
-    String test="Test";
     private WebDriver driver;
 
     public HomePage(WebDriver driver) {
@@ -37,6 +36,10 @@ public class HomePage {
     public FileUploadPage clickFileUpload(){
         clickLink("File Upload");
         return new FileUploadPage(driver);
+    }
+    public WysiwygEditorPage clickWysiwyg(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
     }
 
     public void clickLink(String linkText){

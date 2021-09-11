@@ -54,7 +54,7 @@ public class BaseTest {
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions ChromeOptions = new ChromeOptions();
-            ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+            //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
             driver = new ChromeDriver(ChromeOptions);
 
         }
