@@ -7,7 +7,7 @@ import static org.testng.Assert.*;
 public class FrameTest extends BaseTest {
 
     @Test(groups = {"FrameTest", "regressionTests"})
-    public void textIntoTextArea() {
+    public void testGetTextFromTextArea() {
         String text = "Hello world";
         var editorPage = homePage.clickWysiwyg();
         editorPage.clearTextArea();
