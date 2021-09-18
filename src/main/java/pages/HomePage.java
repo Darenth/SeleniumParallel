@@ -56,6 +56,11 @@ public class HomePage {
         return new LargeAndDeepDOMPage(driver);
     }
 
+    public MultipleWindowsPage clickMultipleWindowsPage(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }

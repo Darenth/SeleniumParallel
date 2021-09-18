@@ -23,6 +23,6 @@ public class FileUploadtests extends BaseTest {
 
         var uploadPage = homePage.clickFileUpload();
         uploadPage.uploadFile(file.getAbsolutePath());
-        Assert.assertEquals(uploadPage.getNameOfUploadedFile(), "Piac.jpg");
+        Assert.assertEquals(uploadPage.getNameOfUploadedFile(), "Pic.jpg");
     }
 }

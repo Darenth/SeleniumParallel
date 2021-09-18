@@ -10,6 +10,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+import utils.WindowManager;
 
 import java.util.concurrent.TimeUnit;
 
@@ -66,6 +67,10 @@ public class BaseTest {
             wait = new WebDriverWait(getChromeDriver(), 5);
         }
         return wait;
+    }
+
+    public WindowManager getWindowManager(){
+        return  new WindowManager(driver);
     }
 
 }
