@@ -1,17 +1,20 @@
 package base;
 
+import com.google.common.io.Files;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 import pages.HomePage;
 import utils.WindowManager;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -50,6 +53,20 @@ public class BaseTest {
         driver.quit();
     }
 
+    @AfterMethod
+    public void recordFailure(ITestResult result) {
+        var camera = (TakesScreenshot) driver;
+        File screenshot = camera.getScreenshotAs(OutputType.FILE);
+        if (ITestResult.FAILURE == result.getStatus()) {
+            try {
+                Files.move(screenshot, new File("src/main/resources/screenshots/"+ result.getName()+".png"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("Screenshot taken: " + screenshot.getAbsolutePath());
+    }
+
     public WebDriver getChromeDriver() {
 
         if (driver == null) {
@@ -69,8 +86,8 @@ public class BaseTest {
         return wait;
     }
 
-    public WindowManager getWindowManager(){
-        return  new WindowManager(driver);
+    public WindowManager getWindowManager() {
+        return new WindowManager(driver);
     }
 
 }

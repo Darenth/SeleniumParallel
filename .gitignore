@@ -4,3 +4,4 @@
 /.allure/
 .idea
 .idea/*
+/src/main/resources/screenshots/*
